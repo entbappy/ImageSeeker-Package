@@ -1,5 +1,8 @@
 from setuptools import find_packages, setup
 
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
+
 setup(
   name = 'ImageSeeker',
   packages = find_packages(),
@@ -7,6 +10,9 @@ setup(
   version = '0.1',
   license='MIT',
   description = 'Its an auto image classification library',
+  long_description=long_description,
+  long_description_content_type="text/markdown",
+  url="https://github.com/entbappy/ImageSeeker-Package",
   author = 'Bappy Ahmed',
   author_email = 'entbappy73@gmail.com',
   keywords = ['imageseeker'],
