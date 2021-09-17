@@ -30,11 +30,13 @@ class dogcat:
         print(dm.class_name())
         print(results)
 
-        if results[0] == 1:
-            prediction = 'dog'
-            return [{ "image" : prediction}]
-        else:
-            prediction = 'cat'
-            return [{ "image" : prediction}]
+        return [{ f"image class" : {str(results[0])}}]
+
+        # if results[0] == 1:
+        #     prediction = 'dog'
+        #     return [{ "image" : prediction}]
+        # else:
+        #     prediction = 'cat'
+        #     return [{ "image" : prediction}]
 
 

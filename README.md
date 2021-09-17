@@ -13,7 +13,6 @@ This repository hosts the development of the ImageSeeker library.
 ## Authors
 
 - [@Bappy Ahmed](https://www.linkedin.com/in/boktiarahmed73/)
-
 Email: entbappy73@gmail.com
 
 Github: https://github.com/entbappy/
@@ -22,7 +21,7 @@ Github: https://github.com/entbappy/
 I'm a Data Science learner. This library I have implemented just for learning purpose.
 
   
-# About ImageSeeker
+## About ImageSeeker
 
 ImageSeeker is a deep learning image classification library written in Python, running on top of the machine learning platform TensorFlow.Keras. It was developed with a focus on enabling fast experimentation of images classification. You can classify any image with any classification model in Keras appliaction by just writing 4 lines of code.
 
@@ -33,7 +32,7 @@ ImageSeeker is:
 - **Flexible** -- Keras adopts the principle of *progressive disclosure of complexity*: simple workflows should be quick and easy that’s why ImageSeeker is Flexible.
 - **Powerful** -- Keras provides industry-strength performance and scalability: so we can use ImageSeeker in the production
 
-# Keras & ImageSeeker 
+## Keras & ImageSeeker 
 
 Keras is the high-level API of TensorFlow 2: an approachable, highly-productive interface
 for solving machine learning problems, with a focus on modern deep learning. We can do so many tasks using Keras and image classification is one of them, but the issue is like we need to write many lines of code to implement an image classification solution.
@@ -41,7 +40,7 @@ for solving machine learning problems, with a focus on modern deep learning. We 
 But in ImageSeeker you don’t need to write many lines of code for implementing an image classification solution. You don’t also have to worry about your data preparation. What you need to do is just have to define your data path & some of the parameters of the model yes, your work will be done!
 
 
-# Image Classification using Keras
+## Image Classification using Keras
 
 Necessary library importing
 ```python
@@ -199,209 +198,128 @@ hist = model.fit(training_set,
 
  Epoch 1/5
 10/10 [==============================] - 231s 21s/step - loss: 3.4007 - accuracy: 0.3812 - val_loss: 0.8920 - val_accuracy: 0.6438
-
 Epoch 2/5
 10/10 [==============================] - 100s 10s/step - loss: 1.0077 - accuracy: 0.6375 - val_loss: 0.6927 - val_accuracy: 0.7328
-
 Epoch 3/5
 10/10 [==============================] - 83s 9s/step - loss: 0.6629 - accuracy: 0.7344 - val_loss: 0.4763 - val_accuracy: 0.8266
-
 Epoch 4/5
 10/10 [==============================] - 69s 7s/step - loss: 0.4356 - accuracy: 0.8406 - val_loss: 0.6980 - val_accuracy: 0.7859
-
 Epoch 5/5
 10/10 [==============================] - 64s 6s/step - loss: 0.7226 - accuracy: 0.7844 - val_loss: 0.3199 - val_accuracy: 0.8906
 
 #### Note: Then again you need write code for prediction as well
 
 
+# Image Classification using ImageSeeker:
 
-# Image Classification using ImageSeeker
+## >>Installation / Setup of ImageSeeker
+**First of all create a new conda environment and activate the environment:**
+```bash
+ conda create -n imageseeker python==3.7.10 -y
+```
+```bash
+ conda activate imageseeker
+```
+**Great! After that install ImageSeeker from pypi using that command:**
 
-Define some parameters in the configuration.py
-
-```python
-
-from tensorflow.keras.applications import VGG16
-
-# Configure your data
-
-TRAIN_DATA_DIR = "H:\\Parsonal\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\data\\train"        # Your training data path
-VALID_DATA_DIR = "H:\\Parsonal\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\data\\valid"       # Your validation data path
-CLASSES = 2                                                                                               # Number of classes in your data
-IMAGE_SIZE = (224,224,3)                                                                                  #Image resulution/dimention with respect to your classification models
-AUGMENTATION = True                                                                                       # If you want to apply Augmentation in your data (Default is True)
-BATCH_SIZE = 32                                                                                           # Number of batch  (Default is 32)
-PREDICTION_DATA_DIR = 'H:\\Parsonal\\\Coding Practice\\iNeuron\\Moduler Coding\\ImageSeeker\\prediction'  # Your prediction/test data path
-
-
-# Configure your model
-
-MODEL_OBJ = ResNet50(include_top=False,weights="imagenet",input_shape=(224,224,3))                         # Your pretrain model object  
-PRETRAIN_MODEL_DIR = None                                                                                  #If you have any pretrain model exist path (Default is None)
-MODEL_NAME ='ResNet50'                                                                                     # Your model name
-EPOCHS = 5                                                                                                 # Number of Epochs
-OPTIMIZER = 'adam'                                                                                         # Optimizers name/object
-LOSS_FUNC = 'categorical_crossentropy'                                                                     # Your loss function name/object
-FREEZE_ALL= True                                                                                           # Model layers freezing (Default is True)
-FREEZE_TILL=None                                                                                          # You can define number of freezing layers (Defualt is None)
-
-
+```bash
+ pip install ImageSeeker
 ```
 
-Great! Now open your Notebook
+If you done the installation then from your terminal just write **imgseeker** keyword it will automatically launch the UI on your local host.
 
-```python
-# Import some Modules of ImageSeeker
 
-import os
-from utils import config
-from utils import data_manager as dm
-import train_engine
-import predict_engine
+## Step-1:
 
-```
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/1.png)
 
-Now reload the configuration you made change
+  
 
-```python
-config.configureData()
-config.configureModel()
-```
-Start training
+## Launching UI on local host:
 
-```python
-train_engine.train()
-```
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/2.png)
+
+
+Yes!! You have got 😀 Now if you scroll down, you will see how you can get start with ImageSeeker below
+
+## Step-2:
+**Click on GET STARTED**
+
+ ![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/3.png) 
+
+
+After clicking on that you will get a form like that and you have to configure it for training 
+
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/4.png) 
+
+## Step-3:
+**Configure those parameters: Example**
+
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/7.png) 
+
+
+Now just hit **Start Trainig** your training will be started And you can see all the log from your terminal itself like that.
+
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/9.png) 
 
 
 Detected pretrain model!!
+
 Model has been saved following directory : Models\VGG16.h5
 Preparing model...
-Freezing all...
-Adding sigmoid...
-Model loaded!!
-Augmetation applied!
-Found 200 images belonging to 2 classes.
-Found 110 images belonging to 2 classes.
-Saving logs at Tensorboard/logs/fit\log_2021_09_09_02_24_11
 
+Freezing all...
+
+Adding sigmoid...
+
+Model loaded!!
+
+Augmetation applied!
+
+Found 200 images belonging to 2 classes.
+
+Found 110 images belonging to 2 classes.
+
+Saving logs at Tensorboard/logs/fit\log_2021_09_09_02_24_11
 Epoch 1/5
 6/6 [==============================] - 35s 6s/step - loss: 6.3008 - accuracy: 0.5385 - val_loss: 1.5761 - val_accuracy: 0.5104
-
 Epoch 2/5
 6/6 [==============================] - 29s 5s/step - loss: 2.8433 - accuracy: 0.5109 - val_loss: 2.4668 - val_accuracy: 0.5312
-
 Epoch 3/5
 6/6 [==============================] - 29s 5s/step - loss: 2.3428 - accuracy: 0.4800 - val_loss: 0.8409 - val_accuracy: 0.5417
-
 Epoch 4/5
 6/6 [==============================] - 29s 5s/step - loss: 0.8796 - accuracy: 0.5927 - val_loss: 0.6251 - val_accuracy: 0.6667
-
 Epoch 5/5
 6/6 [==============================] - 29s 5s/step - loss: 0.6290 - accuracy: 0.6746 - val_loss: 0.5840 - val_accuracy: 0.7188
-
 Model saved at the following location : New_trained_model/newVGG16.h5
 
-## Yes thats it! You are done!!!
-See the classes
-```python
-dm.class_name()
-```
 
-Augmetation applied!
+## Step-4:
+**Prediction:**
 
-Found 200 images belonging to 2 classes.
+Awsome!! 😀😀 You have done the training. Now it's time for predicting. You see there is a button called **Predict**
 
-Found 110 images belonging to 2 classes.
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/6.png) 
 
-{'cat': 0, 'dog': 1}
 
-### Now start predicting
+If you hit that button then you will get your prediction UI like that. Now you can upload images & start predicting😎
 
-```python
-predict_engine.predict()
-```
+![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/10.png) 
 
-Original image : cat.2012.jpg. Predicted as [0]
 
-Original image : cat.2018.jpg. Predicted as [0]
+# Congratulations !! 😀✌ You are done 😊
 
-Original image : dog.2001.jpg. Predicted as [1]
-
-Original image : dog.2002.jpg. Predicted as [1]
-
-#### If you want to see the Tensorboard log
-
-```python
-%load_ext tensorboard
-%tensorboard --logdir Tensorboard/logs/fit
-```
-
-### There you go!!! 😀 Your work is Done!!
+Yes! that's how it is simple.
 
 
 
 
-# Installation / Setup of ImageSeeker
 
-You have to just clone ImageSeeker and install reqiurements.txt
-
-```bash
- git clone https://github.com/entbappy/ImageSeeker-An-Image-Classification-Library.git
-```
-
-Now locate your terminal to ImageSeeker directory
-
-```bash
- pip install -r reqiurements.txt
-```
-
-After cloning the folder structure should look like that...
-
-
-
-
-# Directory structure -
-```
-├── [data]             ## This folder contains your train & valid data
-│    └────[train]
-│    │       ├── [cat]
-│    │       └── [dog]
-     └────[valid]
-             ├── [cat]
-             ├── [dog]
-├── [utils]
-│   ├── __init__.py
-│   ├── callbacks.py
-│   └── config.py
-    ├── data_manager.py
-│   └── model.py
-     
-├── [Checkpoint]       ## Training checkpoints will automatically create here
-│    │   
-│    └── [models]
-│        ├── VGG16.h5
-│        └── Resnet50.h5  
-|── [Models]           ## Pretrain model will be saved here
-|── [New_trained_model] ## Training model will be saved here
-|── [Prediction]
-          ├── dog.jpg  ## testing image for prediction
-│         └── cat.jpeg ## testing image for prediction
-├── [Tensorboard]      ## Tensorboard log will be generated here
-├── Tutorial.ipynb
-├── configuration.py
-├── train_engine.py
-|── predict_engine.py
-├── README.md
-├── requirements.txt
-
-```
-    
 ## Acknowledgements
 
  - [Keras](https://keras.io/)
- - [SUNNY BHAVEEN CHANDRA](https://github.com/c17hawke/basic-CNN-app)
+ - [SUNNY BHAVEEN CHANDRA](https://www.linkedin.com/in/c17hawke/)
+ - [Sourangshu Pal](https://www.linkedin.com/in/sourangshu-pal-0774b212a/)
  - [Python](https://docs.python.org/3/)
 
   
