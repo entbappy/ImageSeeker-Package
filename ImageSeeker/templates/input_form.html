@@ -1,0 +1,174 @@
+<img class="img-fluid" src="static/assets/img/ImageSeeker.png" alt="..." />
+<div class="container px-4 px-lg-5">
+
+           <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ImageSeeker</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="static/css2/nunito-font.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="static/css2/style.css"/>
+</head>
+<body class="form-v9">
+	<div class="page-content">
+		<div class="form-v9-content" style="background-image: url('static/assets/img/form-v9.jpg')">
+			<form class="form-detail" action="/train" method="post">
+				<h2>Configure Below Parameters</h2>
+				<div class="form-row-total">
+
+					<div class="form-row">
+						<h2>Configure Your Data</h2>
+                        <label for="TRAIN_DATA_DIR"> Your training data directory:</label>
+						<input type="text" name="TRAIN_DATA_DIR" id="TRAIN_DATA_DIR" class="input-text" placeholder="TRAIN_DATA_DIR" required>
+					</div>
+
+                     <div class="form-row">
+						 <h2>Configure Your Model</h2>
+                        <label for="MODEL_OBJ"> Choose a Model:</label>
+                         <select class="form-control custom_select" name="MODEL_OBJ" id="MODEL_OBJ">
+                          <option value="Xception">Xception</option>
+                          <option value="VGG16">VGG16</option>
+                          <option value="VGG19">VGG19</option>
+                          <option value="ResNet50">ResNet50</option>
+                          <option value="ResNet101">ResNet101</option>
+                          <option value="ResNet152">ResNet152</option>
+                          <option value="ResNet50V2">ResNet50V2</option>
+                          <option value="ResNet101V2">ResNet101V2</option>
+                          <option value="ResNet152V2">ResNet152V2</option>
+                          <option value="InceptionV3">InceptionV3</option>
+                          <option value="MobileNet">MobileNet</option>
+                          <option value="MobileNetV2">MobileNetV2</option>
+                          <option value="DenseNet121">DenseNet121</option>
+                          <option value="DenseNet169">DenseNet169</option>
+                          <option value="DenseNet201">DenseNet201</option>
+                          <option value="NASNetMobile">NASNetMobile</option>
+                          <option value="EfficientNetB0">EfficientNetB0</option>
+                          <option value="EfficientNetB1">EfficientNetB1</option>
+                          <option value="EfficientNetB2">EfficientNetB2</option>
+                        </select>
+					</div>
+
+				</div>
+
+
+				<div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="VALID_DATA_DIR"> Your validation data directory:</label>
+						<input type="text" name="VALID_DATA_DIR" id="VALID_DATA_DIR" class="input-text" placeholder="VALID_DATA_DIR" required>
+					</div>
+
+
+                   <div class="form-row">
+                        <label for="MODEL_NAME"> Write model name you have selected:</label>
+						<input type="text" name="MODEL_NAME" id="MODEL_NAME" class="input-text" placeholder="MODEL_NAME" required>
+					</div>
+
+
+				</div>
+
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="CLASSES"> Number of classes of your data:</label>
+						<input type="text" name="CLASSES" id="CLASSES" class="input-text" placeholder="CLASSES" required>
+					</div>
+
+
+
+                    <div class="form-row">
+                        <label for="FREEZE_ALL"> Freezing layers:</label>
+                         <select class="form-control custom_select" name="FREEZE_ALL" id="FREEZE_ALL">
+                          <option value="True">True</option>
+                          <option value="None">None</option>
+                        </select>
+					</div>
+
+				</div>
+
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="IMAGE_SIZE"> Put image size with respect to your model:</label>
+						<input type="text" name="IMAGE_SIZE" id="IMAGE_SIZE" class="input-text" placeholder="IMAGE_SIZE = h,w,ch" required>
+					</div>
+
+
+                    <div class="form-row">
+                        <label for="OPTIMIZER"> Select Optimizer:</label>
+                         <select class="form-control custom_select" name="OPTIMIZER" id="OPTIMIZER">
+                          <option value="Adam">Adam</option>
+                          <option value="SGD">SGD</option>
+                        </select>
+					</div>
+
+				</div>
+
+
+                <div class="form-row-total">
+
+                      <div class="form-row">
+                        <label for="AUGMENTATION"> Do you want to apply data Augmentation:</label>
+                         <select class="form-control custom_select" name="AUGMENTATION" id="AUGMENTATION">
+                          <option value="True">True</option>
+                          <option value="None">None</option>
+                        </select>
+					</div>
+
+
+                    <div class="form-row">
+                        <label for="EPOCHS"> Number of Epochs you want to train:</label>
+						<input type="text" name="EPOCHS" id="EPOCHS" class="input-text" placeholder="EPOCHS" required>
+					</div>
+
+				</div>
+
+
+                <div class="form-row-total">
+
+                    <div class="form-row">
+                        <label for="BATCH_SIZE"> Define the batch size:</label>
+						<input type="text" name="BATCH_SIZE" id="BATCH_SIZE" class="input-text" placeholder="BATCH_SIZE" required>
+					</div>
+
+                    <div class="form-row">
+                        <label for="LOSS_FUNC"> Select loss function:</label>
+                         <select class="form-control custom_select" name="LOSS_FUNC" id="LOSS_FUNC">
+                          <option value="categorical_crossentropy">categorical_crossentropy</option>
+                        </select>
+					</div>
+				</div>
+
+
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Start Training">
+
+				</div>
+			</form>
+
+
+			<form class="form-detail" action="/test" method="get">
+			<div class="form-row-last">
+					<h1>Click Here To Predict !</h1>
+					<input type="submit" name="register" class="register" value="Predict">
+
+				</div>
+
+                             <!-- Page Header-->
+			</form>
+
+		</div>
+
+
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
+
+        </div>
+

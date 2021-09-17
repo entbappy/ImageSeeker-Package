@@ -1,0 +1,7 @@
+tensorflow==2.4.1
+scipy==1.6.3
+numpy
+pandas
+Pillow==8.3.2
+Flask
+Flask-Cors==3.0.10

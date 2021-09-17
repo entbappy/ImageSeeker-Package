@@ -1,0 +1,3 @@
+[console_scripts]
+imgseeker = ImageSeeker.main:start_app
+

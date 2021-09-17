@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: ImageSeeker
+Version: 0.1
+Summary: Its an auto image classification library
+Home-page: UNKNOWN
+Author: Bappy Ahmed
+Author-email: entbappy73@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: imageseeker
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

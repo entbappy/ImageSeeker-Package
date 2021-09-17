@@ -1,0 +1,2 @@
+graft ImageSeeker/static
+graft ImageSeeker/templates
