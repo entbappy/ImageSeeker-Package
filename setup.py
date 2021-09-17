@@ -7,7 +7,7 @@ setup(
   name = 'ImageSeeker',
   packages = find_packages(),
   include_package_data=True,
-  version = '0.4',
+  version = '0.5',
   license='MIT',
   description = 'Its an auto image classification library',
   long_description=long_description,
