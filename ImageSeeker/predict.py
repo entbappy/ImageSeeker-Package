@@ -29,8 +29,9 @@ class dogcat:
         results = np.argmax(result, axis=-1)
         print(dm.class_name())
         print(results)
+        out = str(results[0])
 
-        return [{ "image class" : results[0]}]
+        return [{ "image_class" : out}]
 
         # if results[0] == 1:
         #     prediction = 'dog'
