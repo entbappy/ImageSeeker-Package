@@ -12,10 +12,11 @@ This repository hosts the development of the ImageSeeker library.
   
 ## Authors
 
-- [@Bappy Ahmed](https://www.linkedin.com/in/boktiarahmed73/)
-Email: entbappy73@gmail.com
+- [Bappy Ahmed](https://www.linkedin.com/in/boktiarahmed73/)
 
-Github: https://github.com/entbappy/
+- Email: entbappy73@gmail.com
+
+- Github: https://github.com/entbappy/
   
 ## 🚀 About Me
 I'm a Data Science learner. This library I have implemented just for learning purpose.
@@ -23,7 +24,7 @@ I'm a Data Science learner. This library I have implemented just for learning pu
   
 ## About ImageSeeker
 
-ImageSeeker is a deep learning image classification library written in Python, running on top of the machine learning platform TensorFlow.Keras. It was developed with a focus on enabling fast experimentation of images classification. You can classify any image with any classification model in Keras appliaction by just writing 4 lines of code.
+ImageSeeker is a deep learning image classification library written in Python, running on top of the machine learning platform TensorFlow.Keras. It was developed with a focus on enabling fast experimentation of images classification. You can classify any image with any classification model in Keras appliaction without writing any lines of code.
 
 
 ImageSeeker is:
@@ -40,7 +41,7 @@ for solving machine learning problems, with a focus on modern deep learning. We 
 But in ImageSeeker you don’t need to write many lines of code for implementing an image classification solution. You don’t also have to worry about your data preparation. What you need to do is just have to define your data path & some of the parameters of the model yes, your work will be done!
 
 
-## Image Classification using Keras
+# Image Classification using Keras
 
 Necessary library importing
 ```python
@@ -199,12 +200,16 @@ hist = model.fit(training_set,
  Epoch 1/5
 10/10 [==============================] - 231s 21s/step - loss: 3.4007 - accuracy: 0.3812 - val_loss: 0.8920 - val_accuracy: 0.6438
 Epoch 2/5
+
 10/10 [==============================] - 100s 10s/step - loss: 1.0077 - accuracy: 0.6375 - val_loss: 0.6927 - val_accuracy: 0.7328
 Epoch 3/5
+
 10/10 [==============================] - 83s 9s/step - loss: 0.6629 - accuracy: 0.7344 - val_loss: 0.4763 - val_accuracy: 0.8266
 Epoch 4/5
+
 10/10 [==============================] - 69s 7s/step - loss: 0.4356 - accuracy: 0.8406 - val_loss: 0.6980 - val_accuracy: 0.7859
 Epoch 5/5
+
 10/10 [==============================] - 64s 6s/step - loss: 0.7226 - accuracy: 0.7844 - val_loss: 0.3199 - val_accuracy: 0.8906
 
 #### Note: Then again you need write code for prediction as well
@@ -284,12 +289,16 @@ Saving logs at Tensorboard/logs/fit\log_2021_09_09_02_24_11
 Epoch 1/5
 6/6 [==============================] - 35s 6s/step - loss: 6.3008 - accuracy: 0.5385 - val_loss: 1.5761 - val_accuracy: 0.5104
 Epoch 2/5
+
 6/6 [==============================] - 29s 5s/step - loss: 2.8433 - accuracy: 0.5109 - val_loss: 2.4668 - val_accuracy: 0.5312
 Epoch 3/5
+
 6/6 [==============================] - 29s 5s/step - loss: 2.3428 - accuracy: 0.4800 - val_loss: 0.8409 - val_accuracy: 0.5417
 Epoch 4/5
+
 6/6 [==============================] - 29s 5s/step - loss: 0.8796 - accuracy: 0.5927 - val_loss: 0.6251 - val_accuracy: 0.6667
 Epoch 5/5
+
 6/6 [==============================] - 29s 5s/step - loss: 0.6290 - accuracy: 0.6746 - val_loss: 0.5840 - val_accuracy: 0.7188
 Model saved at the following location : New_trained_model/newVGG16.h5
 
@@ -305,6 +314,15 @@ Awsome!! 😀😀 You have done the training. Now it's time for predicting. You 
 If you hit that button then you will get your prediction UI like that. Now you can upload images & start predicting😎
 
 ![Example](https://raw.githubusercontent.com/entbappy/Branching-tutorial/master/New%20folder%20(2)/10.png) 
+
+
+### See the class label in your terminal
+
+Found 200 images belonging to 2 classes.
+
+Found 110 images belonging to 2 classes.
+
+{'cat': 0, 'dog': 1}
 
 
 # Congratulations !! 😀✌ You are done 😊
